@@ -1,0 +1,14 @@
+<!-- Bump the SDK version to whatever goatcorp's SamplePlugin currently uses. -->
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <Version>2.0.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Skin fonts (SIL Open Font License, see the OFL-*.txt files next to them). -->
+    <Content Include="Fonts\*.ttf;Fonts\*.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

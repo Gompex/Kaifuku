@@ -1,0 +1,14 @@
+{
+    "Author":  "Dawid",
+    "Name":  "Kaifuku",
+    "Punchline":  "Kaifuku (ĺ›žĺľ©, recovery): HealBot-style click-to-heal party frames.",
+    "Description":  "Party frames you click to heal. Works out of the box for WHM, SCH, AST and SGE with sensible default bindings; change any binding by picking an icon. One click always casts exactly one action on the frame you clicked.",
+    "ApplicableVersion":  "any",
+    "Tags":  [
+                 "healer",
+                 "party",
+                 "frames",
+                 "ui"
+             ],
+    "RepoUrl":  "https://github.com/Gompex/Kaifuku"
+}

@@ -1,0 +1,13 @@
+<!-- Bump the SDK version to whatever goatcorp's SamplePlugin currently uses. -->
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <Version>2.1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Skins (tokens + fonts) come from the shared Skins.Core project; its Fonts\ folder is copied next to Kaifuku.dll. -->
+    <ProjectReference Include="..\..\Skins.Core\Skins.Core.csproj" />
+    <Using Include="SkinsCore" />
+  </ItemGroup>
+</Project>
