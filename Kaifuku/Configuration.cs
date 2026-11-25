@@ -30,6 +30,7 @@ public class Configuration : IPluginConfiguration
 
     // Binding guide
     public bool ShowGuide { get; set; } = false;
+    public bool GuideOnlyInCombat { get; set; } = false; // hide the guide outside combat (still shown with settings open or in preview)
     public bool GuideLocked { get; set; } = false;
     public GuideLayout GuideStyle { get; set; } = GuideLayout.Table;
     public bool GuideHideEmpty { get; set; } = true;

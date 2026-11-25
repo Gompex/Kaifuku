@@ -848,6 +848,7 @@ public sealed class ConfigWindow : Window
         Check("Show binding guide", c.ShowGuide, v => c.ShowGuide = v);
         ImGui.TextDisabled("Also: /kaifuku guide. Drag it anywhere; it moves separately from the frames.");
         if (!c.ShowGuide) return;
+        Check("Only show in combat (always shown while these settings are open)", c.GuideOnlyInCombat, v => c.GuideOnlyInCombat = v);
         Check("Lock guide in place", c.GuideLocked, v => c.GuideLocked = v);
         EnumCombo("Guide layout", c.GuideStyle, v => c.GuideStyle = v);
         if (c.GuideStyle == GuideLayout.Table)

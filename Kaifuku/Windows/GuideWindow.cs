@@ -35,6 +35,9 @@ public sealed class GuideWindow : Window
     public override bool DrawConditions()
     {
         if (!Cfg.ShowGuide) return false;
+        // Optionally only in combat. Always visible while the settings are open or the preview is on, so it can be moved and tuned.
+        if (Cfg.GuideOnlyInCombat && !Plugin.Condition[Dalamud.Game.ClientState.Conditions.ConditionFlag.InCombat]
+            && !Cfg.Preview && !plugin.SettingsOpen) return false;
         var player = Plugin.ObjectTable.LocalPlayer;
         return player != null && Bindings.JobKey(player.ClassJob.RowId, Cfg) != 0;
     }

@@ -86,6 +86,7 @@ public sealed class Plugin : IDalamudPlugin
     private readonly WindowSystem windows = new("Kaifuku");
     private readonly FramesWindow framesWindow;
     private readonly ConfigWindow configWindow;
+    internal bool SettingsOpen => configWindow.IsOpen;
     private readonly GuideWindow guideWindow;
 
     public Plugin()
