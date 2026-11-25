@@ -1,35 +1,30 @@
-# Kaifuku v2
+# Kaifuku (回復)
 
-Skins: **Ledger**, **Heraldry** and **Signal** (pick one in Settings > Look > Skin), plus **Classic (v1)**.
-Skin fonts are bundled under `Fonts/` (SIL Open Font License; licenses included).
+HealBot-style click-to-heal party frames for Final Fantasy XIV, as a Dalamud plugin.
+*Kaifuku* means "recovery" in Japanese. Formerly known as HealFrames.
 
-HealBot-style click-to-heal party frames for FFXIV (Dalamud).
+## Install
 
-## For players
-Install it, switch to a healer, and the frames appear next to your party list with bindings already set.
-Nothing to configure. Everything is optional and lives in `/kaifuku config`:
+1. In game, type `/xlsettings` and open the **Experimental** tab.
+2. Under **Custom Plugin Repositories**, paste this URL, click **+**, make sure its checkbox is ticked, then **Save and Close**:
 
-- **Bindings**: 4 modifiers (none, Shift, Ctrl, Alt) x 5 mouse buttons (Left, Right, Middle, Mouse 4, Mouse 5).
-  Click a square, pick a suggested skill or search every skill your job has.
-- **Look**: frame size, text size, rounding, out-of-range fade, health colors by HP or by role, every color.
-- **Layout**: frames per row, spacing, sort by party order / role / name, me first, group by role.
-- **Display**: name style, health text (percent / current / missing), MP bar, shields, job icon,
-  your buffs, debuffs, timers.
-- **General**: lock/unlock, snap to party list, preview party, show on non-healer jobs.
+   ```
+   https://raw.githubusercontent.com/Gompex/DalamudPlugins/main/repo.json
+   ```
 
-`/kaifuku` shows or hides the frames.
+3. Type `/xlplugins`, search for **Kaifuku** in **All Plugins** and click **Install**.
 
-## Building and testing
-1. `dotnet build -c Release` in the `Kaifuku` folder (needs the .NET 10 SDK).
-2. In game: `/xlsettings` > Experimental > **Dev Plugin Locations**, add the full path to `bin\x64\Release\Kaifuku.dll`.
-3. `/xlplugins` > Dev Tools > Installed Dev Plugins, enable Kaifuku. After rebuilding, click reload there.
+Updates install automatically, like any other plugin. The same repo also lists my other plugins.
 
-## Design rule
-One click casts exactly one action on the frame you clicked. The plugin never chooses a target,
-chooses a skill, or casts on its own. No sort-by-HP (frames moving under the cursor cause misclicks).
+## Using it
 
-Distribution: combat-affecting plugins aren't accepted in the official Dalamud repo, so share it
-through your own custom repository.
+- `/kaifuku` shows or hides the frames, `/kaifuku config` opens the settings, `/kaifuku guide` toggles the binding guide, `/kaifuku lock` locks or unlocks the frames.
+- Switch to a healer and the frames appear next to your party list with bindings already set: click a frame to heal that member, with Shift, Ctrl, Alt and mouse buttons 4/5 for more skills.
+- Three skins (Ledger, Heraldry, Signal) plus the Classic look, a plugin-wide scale slider, profiles per job or content, and a preview party to tune everything while solo.
+- Shows raises on the way, removable debuffs, heal-to-full debuffs, tank busters, raidwides, aggro, cast bars, pets and more.
+
+One click always casts exactly one action. Kaifuku never chooses a target or a skill, and never acts on its own.
 
 ## License
+
 Kaifuku is licensed under the GNU AGPL-3.0 (see LICENSE). Bundled fonts are under the SIL Open Font License (see Kaifuku/Fonts).
